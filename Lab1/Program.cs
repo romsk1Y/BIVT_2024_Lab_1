@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Runtime.InteropServices;
@@ -52,43 +52,71 @@ public class Program
     #region Level 1
     public int Task_1_1()
     {
-        int answer = 0;
+        int sum = 2;
+        int m = 2;
+        while (m != 35)
+        {
+            m = m + 3;
+            sum += m;
 
-        // code here
-
-        // end
-
-        return answer;
+        }
+        Console.WriteLine($"znachenie= {sum,3:d}");
+        return sum;
     }
     public double Task_1_2()
     {
-        double answer = 0;
+        double sum = 0;
+        double m = 0;
+        double ch = 0;
+        double f;
+        do
+        {
+            m++;
+            ch = 1 / m;
+            sum += ch;
 
-        // code here
-
-        // end
-
-        return answer;
+        } while (m != 10);
+        f = sum;
+        Console.WriteLine("znachenie= {0,8:f}", f);
+        return sum;
     }
     public double Task_1_3()
     {
-        double answer = 0;
+        float sum = 0;
+        float m = 0;
+        float ch = 0;
+        float n = 0;
+        while (m != 112 && n != 113)
+        {
+            m += 2;
+            n += 3;
+            ch = m / n;
+            sum += ch;
 
-        // code here
-
-        // end
-
-        return answer;
+        }
+        double e = sum;
+        Console.WriteLine("znachenie= {0,3:f}", e);
+        return e;
     }
     public double Task_1_4(double x)
     {
-        double answer = 0;
+        float sum = 0;
+        float m = 0;
+        float ch = 0;
+        float n = 0;
+        while (m != 112 && n != 113)
+        {
+            m += 2;
+            n += 3;
+            ch = m / n;
+            sum += ch;
 
-        // code here
+        }
+        double e = sum;
+        Console.WriteLine("znachenie= {0,3:f}", e);
+        return sum;
 
-        // end
 
-        return answer;
     }
     public double Task_1_5(double p, double h)
     {
