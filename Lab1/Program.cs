@@ -68,7 +68,6 @@ public class Program
         double sum = 0;
         double m = 0;
         double ch = 0;
-        double f;
         do
         {
             m++;
@@ -76,8 +75,7 @@ public class Program
             sum += ch;
 
         } while (m != 10);
-        f = sum;
-        Console.WriteLine("znachenie= {0,8:f}", f);
+        Console.WriteLine("znachenie= {0:f}", sum);
         return sum;
     }
     public double Task_1_3()
@@ -94,133 +92,223 @@ public class Program
             sum += ch;
 
         }
-        double e = sum;
-        Console.WriteLine("znachenie= {0,3:f}", e);
-        return e;
+        Console.WriteLine("znachenie= {0:f}", sum);
+        return sum;
     }
     public double Task_1_4(double x)
     {
-        float sum = 0;
-        float m = 0;
-        float ch = 0;
-        float n = 0;
-        while (m != 112 && n != 113)
-        {
-            m += 2;
-            n += 3;
-            ch = m / n;
-            sum += ch;
+        string l = Console.ReadLine();
+        double x = 0;
 
+        if (l != null) {
+            x = double.Parse(l);
         }
-        double e = sum;
-        Console.WriteLine("znachenie= {0,3:f}", e);
-        return sum;
 
+        double ch = x;
+        double sum = Math.Cos(x);
+        
+        for (int i = 2; i < 10; i++) {
+            ch = Math.Cos(i * x) / Math.Pow(x, (i - 1));
+            sum += ch;
+        }
+
+        Console.WriteLine("znachenie= {0:f3}", sum);
+        return sum;
 
     }
     public double Task_1_5(double p, double h)
     {
-        double answer = 0;
+        int o = 0;
+        int p = 0;
 
-        // code here
+        Console.WriteLine("vvedite pervy chlen");
+        string k = Console.ReadLine();
+        if (!string.IsNullOrEmpty(k)) {
+            p = int.Parse(k);
+        } else {
+            Console.WriteLine("Vvedeno nepravilnoe znachenie. Poprobyite snova.");
+            return;
+        }
 
-        // end
+        Console.WriteLine("vvedite raznitsy");
+        string m = Console.ReadLine();
+        if (!string.IsNullOrEmpty(m)) {
+            o = int.Parse(m);
+        } else {
+            Console.WriteLine("Vvedeno nepravilnoe znachenie. Poprobyite snova.");
+            return;
+        }
 
-        return answer;
+        double sum = 0;
+
+        for (int i = 0; i < 10; i++) {
+            double ch = Math.Pow((p + i * o), 2);
+            sum += ch;
+        }
+
+        Console.WriteLine("otvet- {0:f3}", sum);
+        return sum;
     }
     public double Task_1_6(double x)
     {
-        double answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
-    }
+        double x = -4;
+        double y = 0;
+        while(x <=4) {
+            y = 0.5 * Math.Pow(x, 2) - 7 * x;
+            Console.WriteLine("x={0,5:f}\ty={1,5:f}", x, y);
+            x+=0.5;
+        }
     public int Task_1_7()
     {
-        int answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
+        int fact = 1;
+        for(int i=1;i<=6;i++)
+        {
+            fact *= i;
+        }
+        Console.WriteLine("otvet- {0:f3}", fact);
+        return fact;
     }
     public int Task_1_8()
     {
-        int answer = 0;
-
-        // code here;
-
-        // end
-
-        return answer;
+            int sum = 0;
+            int ch = 1;
+            for(int i = 1; i <= 6; i++)
+            {
+                for(int m = 1; m <= i; m++)
+                {
+                    ch = ch * m;
+                }
+                sum += ch;
+                ch = 1;
+            }
+            Console.WriteLine("{0:f3}", sum);
+            return sum;
     }
     public double Task_1_9()
     {
-        double answer = 0;
-
-        // code here;
-
-        // end
-
-        return answer;
+        double sum = 0;
+        double ch = 1;
+        double del = 1;
+        for(double i=1; i <= 6; i++)
+        {
+            del= del * i;
+            ch = (-ch * 5) / del;
+            sum+= ch;   
+        }
+        Console.WriteLine("{0:f3}", sum);
+        return sum;
     }
     public int Task_1_10()
     {
-        int answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
+        int ch = 3;
+        for(int i = 1; i < 7; i++)
+        {
+            ch = ch * 3;
+        }
+        Console.WriteLine("{0:f3}", ch);
+        return ch;
     }
     public void Task_1_11()
     {
-        // There is no test for this task
-
-        // code here
-
+        for(int i = 1; i <= 6; i++)
+        {
+            Console.Write("{0.1:d} ", i);
+        }
+        Console.Write("\n");
+        for (int i = 1; i <= 6; i++)
+        {
+            Console.Write("5");
+        }
     }
     public double Task_1_12(double x)
     {
-        double answer = 0;
+        using System;
 
-        // code here
+class HelloWorld {
+    static void Main() {
+        double ch = 1;
+        double sum = 1;
+        double x = 0;
+        string d = Console.ReadLine();
+        if (!string.IsNullOrEmpty(d)) {
+            x = double.Parse(d);
+        } else {
+            return;
+        }
 
-        // end
+        for (int i = 1; i <= 10; i++) {
+            ch = ch * x;
+            sum += 1 / ch;
+        }
 
-        return answer;
+        Console.WriteLine("{0:f3}", sum);
+        return sum;
+    }
+}
     }
     public double Task_1_13(double x)
     {
-        double answer = 0;
+            double x = -1.5;
+            double y = 0;
+            while (x <= 1.5)
+            {
+                if (x <= -1)
+                {
+                    y = 1;
+                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
 
-        // code here
+                }
+                else if (x > 1)
+                {
+                    y = -1;
+                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
+                }
+                else
+                {
+                    y = -x;
+                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
 
-        // end
-
-        return answer;
+                }
+                x += 0.1;
+            }
     }
     public void Task_1_14()
     {
-        // There is no test for this task
-
-        // code here
+        int pred = 1;
+        int pred2 = 1;
+        int tec;
+        for(int i = 1; i <= 8; i++)
+        {
+            tec = pred + pred2;
+            Console.WriteLine("chislo={0,4:d}", tec);
+            pred2 = pred;
+            pred = tec;               
+        }
 
     }
     public double Task_1_15()
     {
-        double answer = 0;
+            double pred = 2;
+            double pred2 = 1;
+            double preddel = 1;
+            double preddel2 = 1;
+            double tec=0;
+            double c;
+            double m;
+            for(int i = 3; i <= 5; i++)
+            {
+                c = pred + pred2;
+                m=preddel + preddel2;
+                tec = c / m;
+                pred2 = pred;
+                pred = c;
+                preddel2 = preddel;
+                preddel = m;
 
-        // code here
 
-        // end
-
-        return answer;
+            }
+            Console.WriteLine("{0:f3}", tec);
+            return tec;
     }
     public (double, int) Task_1_16()
     {
