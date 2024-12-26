@@ -50,140 +50,114 @@ public class Program
         //program.Task_3_9(0.1);
     }
     #region Level 1
-    public int Task_1_1()
+   public int Task_1_1()
+{
+    int sum = 2;
+    int m = 2;
+    while (m != 35)
     {
-        int sum = 2;
-        int m = 2;
-        while (m != 35)
-        {
-            m = m + 3;
-            sum += m;
-
-        }
-        Console.WriteLine($"znachenie= {sum,3:d}");
-        return sum;
+        m = m + 3;
+        sum += m;
     }
+    return sum;
+}
+
     public double Task_1_2()
+{
+    double sum = 0;
+    double m = 0;
+    double ch = 0;
+    do
     {
-        double sum = 0;
-        double m = 0;
-        double ch = 0;
-        do
-        {
-            m++;
-            ch = 1 / m;
-            sum += ch;
+        m++;
+        ch = 1 / m;
+        sum += ch;
 
-        } while (m != 10);
-        Console.WriteLine("znachenie= {0:f}", sum);
-        return sum;
-    }
+    } while (m != 10);
+
+    return sum;
+}
+
     public double Task_1_3()
-    {
-        float sum = 0;
-        float m = 0;
-        float ch = 0;
-        float n = 0;
-        while (m != 112 && n != 113)
-        {
-            m += 2;
-            n += 3;
-            ch = m / n;
-            sum += ch;
+{
+    double sum = 0;
+    double m = 0;
+    double n = 0;
 
-        }
-        Console.WriteLine("znachenie= {0:f}", sum);
-        return sum;
+    while (m != 112 && n != 113)
+    {
+        m += 2;
+        n += 3;
+        double ch = m / n;
+        sum += ch;
     }
+
+    return sum;
+}
+
     public double Task_1_4(double x)
-    {
-        string l = Console.ReadLine();
-        double x = 0;
+{
+    double ch = x;
+    double sum = Math.Cos(x);
 
-        if (l != null) {
-            x = double.Parse(l);
-        }
-
-        double ch = x;
-        double sum = Math.Cos(x);
-        
-        for (int i = 2; i < 10; i++) {
-            ch = Math.Cos(i * x) / Math.Pow(x, (i - 1));
-            sum += ch;
-        }
-
-        Console.WriteLine("znachenie= {0:f3}", sum);
-        return sum;
-
+    for (int i = 2; i < 10; i++) {
+        ch = Math.Cos(i * x) / Math.Pow(x, (i - 1));
+        sum += ch;
     }
+
+    return sum;
+}
+
     public double Task_1_5(double p, double h)
+{
+    double sum = 0;
+
+    for (int i = 0; i < 10; i++)
     {
-        int o = 0;
-        int p = 0;
-
-        Console.WriteLine("vvedite pervy chlen");
-        string k = Console.ReadLine();
-        if (!string.IsNullOrEmpty(k)) {
-            p = int.Parse(k);
-        } else {
-            Console.WriteLine("Vvedeno nepravilnoe znachenie. Poprobyite snova.");
-            return;
-        }
-
-        Console.WriteLine("vvedite raznitsy");
-        string m = Console.ReadLine();
-        if (!string.IsNullOrEmpty(m)) {
-            o = int.Parse(m);
-        } else {
-            Console.WriteLine("Vvedeno nepravilnoe znachenie. Poprobyite snova.");
-            return;
-        }
-
-        double sum = 0;
-
-        for (int i = 0; i < 10; i++) {
-            double ch = Math.Pow((p + i * o), 2);
-            sum += ch;
-        }
-
-        Console.WriteLine("otvet- {0:f3}", sum);
-        return sum;
+        double ch = Math.Pow((p + i * h), 2);
+        sum += ch;
     }
+
+    return sum;
+}
+
     public double Task_1_6(double x)
     {
-        double x = -4;
         double y = 0;
         while(x <=4) {
             y = 0.5 * Math.Pow(x, 2) - 7 * x;
-            Console.WriteLine("x={0,5:f}\ty={1,5:f}", x, y);
             x+=0.5;
         }
+        return x;
+    }
     public int Task_1_7()
+{
+    int fact = 1;
+    for (int i = 1; i <= 6; i++)
     {
-        int fact = 1;
-        for(int i=1;i<=6;i++)
-        {
-            fact *= i;
-        }
-        Console.WriteLine("otvet- {0:f3}", fact);
-        return fact;
+        fact *= i;
     }
+
+    return fact;
+}
+
     public int Task_1_8()
+{
+    int sum = 0;
+    int ch = 1;
+    for (int i = 1; i <= 6; i++)
     {
-            int sum = 0;
-            int ch = 1;
-            for(int i = 1; i <= 6; i++)
-            {
-                for(int m = 1; m <= i; m++)
-                {
-                    ch = ch * m;
-                }
-                sum += ch;
-                ch = 1;
-            }
-            Console.WriteLine("{0:f3}", sum);
-            return sum;
+        for (int m = 1; m <= i; m++)
+        {
+            ch = ch * m;
+        }
+        sum += ch;
+        ch = 1;
     }
+
+    return sum;
+}
+
     public double Task_1_9()
     {
         double sum = 0;
@@ -195,7 +169,6 @@ public class Program
             ch = (-ch * 5) / del;
             sum+= ch;   
         }
-        Console.WriteLine("{0:f3}", sum);
         return sum;
     }
     public int Task_1_10()
@@ -205,87 +178,72 @@ public class Program
         {
             ch = ch * 3;
         }
-        Console.WriteLine("{0:f3}", ch);
         return ch;
     }
     public void Task_1_11()
     {
+        int a = 0;
         for(int i = 1; i <= 6; i++)
         {
-            Console.Write("{0.1:d} ", i);
+            a++;
         }
-        Console.Write("\n");
         for (int i = 1; i <= 6; i++)
         {
-            Console.Write("5");
+            a++;
         }
     }
     public double Task_1_12(double x)
+{
+    double ch = 1;
+    double sum = 1;
+
+    for (int i = 1; i <= 10; i++)
     {
-        using System;
-
-class HelloWorld {
-    static void Main() {
-        double ch = 1;
-        double sum = 1;
-        double x = 0;
-        string d = Console.ReadLine();
-        if (!string.IsNullOrEmpty(d)) {
-            x = double.Parse(d);
-        } else {
-            return;
-        }
-
-        for (int i = 1; i <= 10; i++) {
-            ch = ch * x;
-            sum += 1 / ch;
-        }
-
-        Console.WriteLine("{0:f3}", sum);
-        return sum;
+        ch = ch * x;
+        sum += 1 / ch;
     }
+
+    return sum;
 }
-    }
+
     public double Task_1_13(double x)
+{
+    double y = 0;
+    
+    if (x <= -1)
     {
-            double x = -1.5;
-            double y = 0;
-            while (x <= 1.5)
-            {
-                if (x <= -1)
-                {
-                    y = 1;
-                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
-
-                }
-                else if (x > 1)
-                {
-                    y = -1;
-                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
-                }
-                else
-                {
-                    y = -x;
-                    Console.WriteLine("x={0,3:f}  y={1,3:f}", x, y);
-
-                }
-                x += 0.1;
-            }
+        y = 1;
     }
-    public void Task_1_14()
+    else if (x > 1)
     {
-        int pred = 1;
-        int pred2 = 1;
-        int tec;
-        for(int i = 1; i <= 8; i++)
-        {
-            tec = pred + pred2;
-            Console.WriteLine("chislo={0,4:d}", tec);
-            pred2 = pred;
-            pred = tec;               
-        }
-
+        y = -1;
     }
+    else
+    {
+        y = -x;
+    }
+
+    return y;
+}
+    
+    public int Task_1_14()
+{
+    int pred = 1;
+    int pred2 = 1;
+    int tec;
+    int result = 0;
+
+    for (int i = 1; i <= 8; i++)
+    {
+        tec = pred + pred2;
+        result = tec;
+        pred2 = pred;
+        pred = tec;
+    }
+
+    return result;
+}
+
     public double Task_1_15()
     {
             double pred = 2;
@@ -304,43 +262,44 @@ class HelloWorld {
                 pred = c;
                 preddel2 = preddel;
                 preddel = m;
-
-
             }
-            Console.WriteLine("{0:f3}", tec);
             return tec;
     }
-    public (double, int) Task_1_16()
+    unsafe static double Method16(double* tochnost)
+{
+    double sum = 0;
+    double ch = 1;
+    double gr = 0;
+
+    for (int i = 0; i < 64; i++)
     {
-        double answer = 0;
-        int power = 0;
-
-        // code here
-
-        // end
-
-        return (answer, power);
+        sum += ch;
+        ch *= 2;
     }
-    public double Task_1_17(double x)
-    {
-        double answer = 0;
 
-        // code here
+    gr = sum / 15.0;
+    *tochnost = 1;
 
-        // end
+    return gr;
+}
 
-        return answer;
-    }
+    static double Method17(double x)
+{
+    double r = 6350;
+    double rast = Math.Sqrt(2 * r * x);
+    return rast;
+}
+
     public int Task_1_18(int x)
+{
+    int kl = 10;
+    for (int i = 3; i <= x; i += 3)
     {
-        int answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
+        kl *= 2;
     }
+    return kl;
+}
+
     #endregion
 
     #region Level 2
@@ -355,15 +314,20 @@ class HelloWorld {
         return answer;
     }
     public int Task_2_2()
+{
+    int n = 4;
+    int p = 1;
+    int L = 30000;
+
+    for (int i = n; p * i <= L; i += 3)
     {
-        int answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
+        p *= i;
+        n = i;
     }
+
+    return n;
+}
+
     public int Task_2_3(double a, double h, double p)
     {
         int answer = 0;
@@ -375,15 +339,22 @@ class HelloWorld {
         return answer;
     }
     public double Task_2_4(double x)
+{
+    double s = 0.0;
+    double term;
+    long n = 0;
+    const double e = 0.0001;
+
+    do
     {
-        double answer = 0;
+        term = Math.Pow(x, 2 * n);
+        s += term;
+        n++;
+    } while (Math.Abs(term) >= e);
 
-        // code here
+    return s;
+}
 
-        // end
-
-        return answer;
-    }
     public (int, int) Task_2_5(int N, int M)
     {
         int quotient = 0, remainder = 0;
@@ -395,15 +366,20 @@ class HelloWorld {
         return (quotient, remainder);
     }
     public int Task_2_6()
+{
+    int cells = 10;
+    int targetCells = 105;
+    int hours = 0;
+
+    while (cells < targetCells)
     {
-        int answer = 0;
-
-        // code here
-
-        // end
-
-        return answer;
+        cells *= 2;
+        hours += 3;
     }
+
+    return hours;
+}
+
     public double Task_2_7a()
     {
         double answer = 0;
@@ -435,15 +411,20 @@ class HelloWorld {
         return answer;
     }
     public int Task_2_8()
+{
+    double a = 10000;
+    double b = a * 2;
+    int c = 0;
+
+    while (a < b)
     {
-        int answer = 0;
-
-        // code here;
-
-        // end
-
-        return answer;
+        a *= 1.08;
+        c++;
     }
+
+    return c;
+}
+
     public int Task_2_9()
     {
         int answer = 0;
@@ -455,15 +436,32 @@ class HelloWorld {
         return answer;
     }
     public int Task_2_10()
+{
+    double num1 = 1, den1 = 1; 
+    double num2 = 2, den2 = 1;
+    double diff = 0.001;
+    int n = 2;
+
+    while (true)
     {
-        int answer = 0;
+        double num3 = num1 + num2;
+        double den3 = den1 + den2;
 
-        // code here;
-
-        // end
-
-        return answer;
+        if (Math.Abs((num3 / den3) - (num2 / den2)) <= diff)
+        {
+            break;
+        }
+        num1 = num2;
+        den1 = den2;
+        num2 = num3;
+        den2 = den3;
+        
+        n++;
     }
+
+    return n;
+}
+
     #endregion
 
     #region Level 3
@@ -528,25 +526,44 @@ class HelloWorld {
         return (S, y);
     }
     public (double, double) Task_3_7(double x)
+{
+    double sum = 1;
+    double ch = 1;
+    double i = 2;
+    double summath = 0;
+
+    do
     {
-        double S = 0, y = 0;
+        ch *= (x * x) / (i * (i - 1));
+        sum += ch;
+        i += 2;
+    } while (Math.Abs(ch) >= 0.0001);
 
-        // code here
+    summath = (Math.Exp(x) + Math.Exp(-x)) / 2;
 
-        // end
+    return (sum, summath);
+}
 
-        return (S, y);
-    }
     public (double, double) Task_3_8(double x)
+{
+    double a = 0;
+    double b = 1;
+    double h = 0.05;
+    int n = (int)((b - a) / h);
+
+    double S = (h / 2) * (f(a) + f(b));
+    for (int i = 1; i < n; i++)
     {
-        double S = 0, y = 0;
-
-        // code here
-
-        // end
-
-        return (S, y);
+        double xi = a + i * h;
+        S += f(xi);
     }
+    S *= h;
+
+    double y = Math.Exp(2 * x);
+
+    return (S, y);
+}
+
     public (double, double) Task_3_9(double x)
     {
         double S = 0, y = 0;
