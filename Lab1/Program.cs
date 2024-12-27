@@ -265,7 +265,7 @@ public class Program
             }
             return tec;
     }
-    public int Task_1_16(double* tochnost)
+    public double Task_1_16(double* tochnost)
 {
     double sum = 0;
     double ch = 1;
