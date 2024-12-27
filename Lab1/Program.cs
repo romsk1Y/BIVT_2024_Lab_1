@@ -265,7 +265,7 @@ public class Program
             }
             return tec;
     }
-    unsafe static double Method16(double* tochnost)
+    public int Task_1_16(double* tochnost)
 {
     double sum = 0;
     double ch = 1;
@@ -283,7 +283,7 @@ public class Program
     return gr;
 }
 
-    static double Method17(double x)
+    public double Task_1_17(double x)
 {
     double r = 6350;
     double rast = Math.Sqrt(2 * r * x);
